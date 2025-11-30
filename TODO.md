@@ -1,0 +1,25 @@
+﻿# TODO
+
+- Config
+  - [x] settings.toml: port baudrate/parity/stopbits, poll interval, log dir, filename rules.
+  - [x] logging.conf: base format/level.
+- Communication/Domain
+  - [x] core.bus: Modbus wrapper with retries/reconnect options.
+  - [x] core.session: cycle lifecycle management.
+  - [x] logging_pipeline.schemas: log record schema.
+  - [x] logging_pipeline.writer: file naming + JSONL writer.
+- Auth/Subscription
+  - [ ] auth.license: subscription key validation, trial limits, local cache.
+  - [ ] auth.user: user session, permission checks.
+- Interface
+  - [x] ui.cli: start-cycle command skeleton.
+  - [x] Port CRUD: ports list/add/update/remove.
+  - [x] status/stop commands with session tracking file and basic error handling.
+  - [x] GUI skeleton (PySide6) for start/stop and monitoring.
+- Extensions
+  - [ ] logging_pipeline.uploader: async upload skeleton (queue + retry), currently no-op.
+  - [ ] core.inventory: domain model/storage interface skeleton.
+- Tests
+  - [x] Bus stub/retry tests.
+  - [x] Session/log writer test.
+  - [ ] License validation tests.
