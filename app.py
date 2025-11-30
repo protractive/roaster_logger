@@ -1,0 +1,8 @@
+from __future__ import annotations
+
+from __future__ import annotations
+
+from ui.cli import main
+
+if __name__ == "__main__":
+    main()
