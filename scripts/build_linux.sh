@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail
-
 # Linux build script for Roaster Logger
 # Requires pyinstaller installed in the active environment.
+# Run with: bash scripts/build_linux.sh
+set -e
 
 pyinstaller --windowed --onefile \
   --name roaster_logger \
