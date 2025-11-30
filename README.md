@@ -23,6 +23,13 @@ Logs are written to data/logs/ as `{cycle}_{timestamp}.log`.
 - Stop: `python app.py stop` (clears session file; if a process is running, stop it manually/Ctrl+C)
 
 ## Desktop GUI (PySide6)
-- Install: `pip install PySide6`
+- Install (venv 추천): `pip install -r requirements.txt`
 - Run: `python -m ui.desktop.app`
-- Features: select port/client (stub or pymodbus), set cycle name/address/count/interval, start/stop logging; logs are saved to `data/logs/`.
+- Features: multi-port start/stop, cycle info (bean/weight/note), live graph, logs tab, port editor (add/update/delete, COM 리스트 조회).
+- 설정/로그 위치: `settings.toml`와 `logs/`는 사용자 프로필 디렉터리(appdirs 경로)에 자동 생성됨. 초기 실행 시 기본 설정이 만들어집니다.
+
+## Build (onefile)
+- Windows: `powershell -ExecutionPolicy Bypass -File scripts/build_win.ps1`
+- macOS: `bash scripts/build_mac.sh`
+- Linux: `bash scripts/build_linux.sh`
+결과물은 `dist/` 폴더에 생성됩니다. (아이콘 파일이 없으면 기본 아이콘으로 빌드됨)

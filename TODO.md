@@ -15,10 +15,13 @@
   - [x] ui.cli: start-cycle command skeleton.
   - [x] Port CRUD: ports list/add/update/remove.
   - [x] status/stop commands with session tracking file and basic error handling.
-  - [x] GUI skeleton (PySide6) for start/stop and monitoring.
+  - [x] GUI (PySide6): multi-port, cycle info, graph, logs tab.
 - Extensions
   - [ ] logging_pipeline.uploader: async upload skeleton (queue + retry), currently no-op.
   - [ ] core.inventory: domain model/storage interface skeleton.
+- Packaging/Distribution
+  - [x] PyInstaller onefile scripts for win/mac/linux.
+  - [ ] Code signing/notarization (macOS/Windows).
 - Tests
   - [x] Bus stub/retry tests.
   - [x] Session/log writer test.
